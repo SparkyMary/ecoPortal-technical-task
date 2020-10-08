@@ -1,0 +1,21 @@
+.root {
+  line-height: 20px;
+  &.centered {
+    padding: 32px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .error {
+    margin-bottom: 16px;
+  }
+
+  button {
+    background: white;
+    border: 1px solid grey;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}

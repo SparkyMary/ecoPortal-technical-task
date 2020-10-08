@@ -1,0 +1,5 @@
+.root {
+  > div:not(.name) {
+    padding-left: 16px;
+  }
+}

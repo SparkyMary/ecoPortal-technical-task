@@ -1,0 +1,17 @@
+.root {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 24px;
+  column-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  min-width: 430px;
+
+  > div {
+    margin-bottom: 32px;
+    padding-top: 8px;
+    border: 1px solid #dadada;
+    padding: 16px;
+    border-radius: 3px;
+    box-shadow: 3px 2px 2px 1px rgba(black, 0.1);
+  }
+}

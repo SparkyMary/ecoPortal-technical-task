@@ -1,0 +1,21 @@
+{
+  "name": "technical-task-integration-tests",
+  "description": "TestCafe UI tests for Maria Chibel Westpac Technical Task",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "cd ../../../ && npm start",
+    "test:develop": "testcafe chrome ./tests --debug-on-fail --reporter spec html:artifacts/reports/report.html",
+    "test:listbrowsers": "testcafe --list-browsers",
+    "test:ci:posts": "testcafe chrome:headless ./tests/users --reporter spec --stop-on-first-fail --speed 0.8 --concurrency 3"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "dotenv": "^8.1.0",
+    "lodash": "^4.17.19",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.6",
+    "start-server-and-test": "^1.11.2",
+    "testcafe": "^1.8.8",
+    "testcafe-reporter-html": "^1.4.4"
+  }
+}
