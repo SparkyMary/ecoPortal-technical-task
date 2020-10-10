@@ -31,6 +31,8 @@ At my current work some of our applications deployed to Google's App Engine.
 
 ### Question 5: Polymorphism
 
+[Please refer to the code](./src/answers/Q5_Polymorphism.js).
+
 ### Question 6: Reviewing/refactoring
 
 ```
