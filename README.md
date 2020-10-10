@@ -4,24 +4,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Answers
 
-### Question 1: Mongodb
+### Question 1: MongoDB
+
+[Please refer to the code](./src/answers/Q1_MongoDB.md).
 
 ### Question 2: OOP
 
-Please refer to the src/answers/Q2_OOP.js for the code. Run `npm run test` for testing those functions.
+[Please refer to the code](./src/answers/Q2_OOP.js). Run `npm run test` for testing those functions.
 
 Main difference in inheritance and composition in short way might be explained as following:
 
-- Think of `inheritance` when you can describe connection between two objects as one IS another one.
+- Think of `inheritance` when you can describe connection between two objects as one **IS** another one.
   Like in my example `CardWithVideo` IS a Card but with the specific method, same with `CardWithDocument`
-- Think of `composition` when one object one is PART of another one. As in my example, CardWithVideo and CardWithDocument
+- Think of `composition` when one object one is **PART** of another one. As in my example, CardWithVideo and CardWithDocument
   are parts of `PairOfCards`
 
 ### Question 3: Cloud Services
 
+As a pure Front End Dev I haven't had too much exposure to use of cloud services in day-to-day activities.
+For personal needs I used AWS Amplify, EC2 and S3.
+At my current work some of our applications deployed to Google's App Engine.
+
 ### Question 4: Unique
 
-Please refer to the src/answers/Q4_Uniq.js for the code. Run `npm run test` for testing those functions.
+[Please refer to the code](./src/answers/Q4_Uniq.js). Run `npm run test` for testing those functions.
 
 ### Question 5: Polymorphism
 
@@ -65,9 +71,11 @@ end
 
 ### Question 7: Chains
 
-Please refer to the src/answers/Q7_Chains.js for the code. Run `npm run test` for testing this function.
+[Please refer to the code](./src/answers/Q7_Chains.js). Run `npm run test` for testing this function.
 
 ### Question 8: JS Framework
+
+[Live demo:](https://master.d29mejgv1hlv83.amplifyapp.com/ 'Maria Chibel Technical Task')
 
 `npm start` to run application on localhost:3000
 in integration_tests/ui/testcafe run `npm run test:develop` to run integration tests

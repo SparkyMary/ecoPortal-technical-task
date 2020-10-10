@@ -13,7 +13,7 @@ export const uniqWithIndexOf = (list) => {
   return uniqArr
 }
 
-export const uniqWQuadratic = (list) => {
+export const uniqQuadratic = (list) => {
   const uniqArr = [list[0]]
 
   for (var i = 1; i < list.length; i++) {
@@ -64,21 +64,28 @@ const sortPortion = (list, left, right) => {
   return i
 }
 
-export const quickSort = (list, left, right) => {
+export const quickSort = (list) => {
+  const result = quickSortWithIndexes(list, 0, list.length - 1)
+  return result
+}
+
+export const quickSortWithIndexes = (list, left, right) => {
   let index
+
   if (list.length > 1) {
     index = sortPortion(list, left, right)
 
     if (left < index - 1) {
       //sorting portion of the list to the left of initialElement
-      quickSort(list, left, index - 1)
+      quickSortWithIndexes(list, left, index - 1)
     }
     if (index < right) {
       //sorting portion of the list to the right of initialElement
-      quickSort(list, index, right)
+      quickSortWithIndexes(list, index, right)
     }
+
+    return list
   }
-  return list
 }
 
 // end of sorting helper section

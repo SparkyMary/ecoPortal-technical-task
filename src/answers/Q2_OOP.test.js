@@ -10,10 +10,10 @@ test('it tests PairOfCards', () => {
     source: 'something.doc',
   }
   const newPairOfCards = new PairOfCards(videoCard, docCard)
-  expect(newPairOfCards.cardWithVideo.playing).toBe(false)
-  expect(newPairOfCards.cardWithDocument.displaying).toBe(false)
+  expect(newPairOfCards.leftCard.playing).toBe(false)
+  expect(newPairOfCards.rightCard.displaying).toBe(false)
 
-  newPairOfCards.showOffCards()
-  expect(newPairOfCards.cardWithVideo.playing).toBe(true)
-  expect(newPairOfCards.cardWithDocument.displaying).toBe(true)
+  newPairOfCards.displayCards()
+  expect(newPairOfCards.leftCard.playing).toBe(true)
+  expect(newPairOfCards.rightCard.displaying).toBe(true)
 })

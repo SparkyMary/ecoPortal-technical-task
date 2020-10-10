@@ -8,6 +8,9 @@ class Card {
   displayOwner() {
     console.log('Owner is: ', this.owner)
   }
+  display() {
+    console.log('I am doing nothing')
+  }
 }
 
 // examples of inheritance
@@ -16,8 +19,11 @@ class CardWithVideo extends Card {
     super(card)
     this.playing = false
   }
-  playVideo() {
+  display() {
     this.displayOwner()
+    this.playVideo()
+  }
+  playVideo() {
     this.playing = true
     console.log('I am playing video')
   }
@@ -28,8 +34,11 @@ class CardWithDocument extends Card {
     super(card)
     this.displaying = false
   }
-  displayDocument() {
+  display() {
     this.displayOwner()
+    this.displayDocument()
+  }
+  displayDocument() {
     this.displaying = true
     console.log('I am displaying document')
   }
@@ -38,11 +47,11 @@ class CardWithDocument extends Card {
 // Example of composition
 export class PairOfCards {
   constructor(videoCard, docCard) {
-    this.cardWithVideo = new CardWithVideo(videoCard)
-    this.cardWithDocument = new CardWithDocument(docCard)
+    this.leftCard = new CardWithVideo(videoCard)
+    this.rightCard = new CardWithDocument(docCard)
   }
-  showOffCards() {
-    this.cardWithVideo.playVideo()
-    this.cardWithDocument.displayDocument()
+  displayCards() {
+    this.leftCard.display()
+    this.rightCard.display()
   }
 }

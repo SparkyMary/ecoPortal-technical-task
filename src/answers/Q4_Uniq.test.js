@@ -1,7 +1,7 @@
 import {
   uniqWithSet,
   uniqWithIndexOf,
-  uniqWQuadratic,
+  uniqQuadratic,
   quickSort,
   uniqWithQuickSort,
 } from './Q4_Uniq'
@@ -38,31 +38,24 @@ test('it tests uniqWithIndexOf', () => {
   expect(uniqWithIndexOf(listOfObjects)).toStrictEqual(listOfObjects)
 })
 
-test('it tests uniqWQuadratic', () => {
-  expect(uniqWQuadratic(listOfNumbers)).toStrictEqual(uniqNumbers)
-  expect(uniqWQuadratic(listOfStrings)).toStrictEqual(uniqStrings)
-  expect(uniqWQuadratic(listOfNumbersAndStrings)).toStrictEqual(
+test('it tests uniqQuadratic', () => {
+  expect(uniqQuadratic(listOfNumbers)).toStrictEqual(uniqNumbers)
+  expect(uniqQuadratic(listOfStrings)).toStrictEqual(uniqStrings)
+  expect(uniqQuadratic(listOfNumbersAndStrings)).toStrictEqual(
     uniqNumbersAndStrings
   )
-  expect(uniqWQuadratic(listOfObjects)).toStrictEqual(listOfObjects)
+  expect(uniqQuadratic(listOfObjects)).toStrictEqual(listOfObjects)
 })
 
+// NOTE Sorting makes sense for the values of the same type, ot at least if we
+// want to mix numbers and strings, strings must be numerical, like '2'
 test('it tests quickSort', () => {
   const sortedNumbers = [1, 1, 1, 2, 2, 3]
   const sortedStrings = ['a', 'a', 'ab', 'ab', 'ba', 'bab']
 
-  expect(quickSort(listOfNumbers, 0, listOfNumbers.length - 1)).toStrictEqual(
-    sortedNumbers
-  )
-  expect(quickSort(listOfStrings, 0, listOfStrings.length - 1)).toStrictEqual(
-    sortedStrings
-  )
-  expect(
-    quickSort(listOfNumbersAndStrings, 0, listOfNumbersAndStrings.length - 1)
-  ).toStrictEqual(sortedStrings.concat(sortedNumbers))
-  expect(quickSort(listOfObjects, 0, listOfObjects.length - 1)).toStrictEqual(
-    listOfObjects
-  )
+  expect(quickSort(listOfNumbers)).toStrictEqual(sortedNumbers)
+  expect(quickSort(listOfStrings)).toStrictEqual(sortedStrings)
+  expect(quickSort(listOfObjects)).toStrictEqual(listOfObjects)
 })
 
 test('it tests uniqWithQuickSort', () => {
@@ -70,8 +63,5 @@ test('it tests uniqWithQuickSort', () => {
 
   expect(uniqWithQuickSort(listOfNumbers)).toStrictEqual(uniqNumbers)
   expect(uniqWithQuickSort(listOfStrings)).toStrictEqual(uniqStrings)
-  expect(uniqWQuadratic(listOfNumbersAndStrings)).toStrictEqual(
-    uniqStringsAndNumbers
-  )
-  expect(uniqWQuadratic(listOfObjects)).toStrictEqual(listOfObjects)
+  expect(uniqWithQuickSort(listOfObjects)).toStrictEqual(listOfObjects)
 })
