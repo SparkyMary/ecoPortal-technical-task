@@ -42,4 +42,4 @@ const sum = 'Hello' + ' ' + 'World' // sum === 'Hello World'
 const sum = [2, 3] + [4, 5] // sum === [2,3,4,5]
 
 // Adding number or string to Array in JS
-const sum = [2, 3] + 1 + 'up' // sum === '2,31up'
+const sum = [2, 3] + 1 + 'me' // sum === '2,31me'
